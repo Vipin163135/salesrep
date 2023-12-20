@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "480106596901",
+    "project_id": "sonnarcrm-3712a",
+    "storage_bucket": "sonnarcrm-3712a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480106596901:android:3a139acc6cb5dbcb8c4dcc",
+        "android_client_info": {
+          "package_name": "com.SonnarCRM.FSA"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480106596901-cvtv96rs5pqcir376v165903n07ckpu9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP6RZ3fQ_6s3nBNqReuhII6cvMzmplgwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480106596901-cvtv96rs5pqcir376v165903n07ckpu9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "480106596901-3fkbk8hgsbqpbd4n4fg3l3egksdl9kj9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SonnarCRM.FSA"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480106596901:android:de0c56c88eb2664e8c4dcc",
+        "android_client_info": {
+          "package_name": "com.salesrep.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480106596901-cvtv96rs5pqcir376v165903n07ckpu9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP6RZ3fQ_6s3nBNqReuhII6cvMzmplgwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480106596901-cvtv96rs5pqcir376v165903n07ckpu9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "480106596901-3fkbk8hgsbqpbd4n4fg3l3egksdl9kj9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SonnarCRM.FSA"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480106596901:android:256d1d2a0e12a8058c4dcc",
+        "android_client_info": {
+          "package_name": "com.sonnarCRM"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480106596901-cvtv96rs5pqcir376v165903n07ckpu9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP6RZ3fQ_6s3nBNqReuhII6cvMzmplgwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480106596901-cvtv96rs5pqcir376v165903n07ckpu9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "480106596901-3fkbk8hgsbqpbd4n4fg3l3egksdl9kj9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SonnarCRM.FSA"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

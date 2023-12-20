@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="data"
+            type="com.salesrep.app.data.models.response.ProductAssortment" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:weightSum="100"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="25"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="start"
+                android:text="@{data.product.integration_num}"
+                android:textColor="@color/blue_004"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="40"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@{data.product.title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_weight="15"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="@{data.product.lov_product_uom}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_weight="20"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@{data.product.lov_product_status}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/grey_6" />
+
+    </LinearLayout>
+</layout>
+
+
+

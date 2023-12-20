@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_white_curved_12"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_12sdp">
+
+            <ImageButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/quantum_ic_clear_grey600_24"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/print"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="@dimen/_13sdp"
+                android:id="@+id/tvTitle"
+                android:textColor="@color/colorPrimary"
+                />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.7dp"
+                android:background="@color/grey_5"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:paddingHorizontal="@dimen/_24sdp"
+                android:id="@+id/tvOrderDetail"
+                android:background="@drawable/background_blue_curved_12dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/order_detail"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:paddingHorizontal="@dimen/_24sdp"
+                android:id="@+id/tvPaymentDetail"
+                android:background="@drawable/background_blue_curved_12dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/payment_detail"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOrderDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

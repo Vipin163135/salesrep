@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlAnswer"
+        android:background="@drawable/bg_outline_grey_dark"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:id="@+id/rdAns"
+            android:clickable="false"
+            android:focusable="false"
+            android:buttonTint="@color/grey_6"
+            android:layout_marginStart="@dimen/_6sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_6"
+            android:gravity="start"
+            android:text="One"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rdAns"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_13sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:hint="@string/enter_digit"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

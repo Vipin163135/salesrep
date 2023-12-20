@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:src="@drawable/ic_back"
+                android:padding="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:drawablePadding="@dimen/_4sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="start"
+            android:text="@string/change_language"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_14sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvlanguages"/>
+            <!--            <RadioGroup-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="vertical">-->
+            <!--                <RadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:id="@+id/rbEnglish"-->
+            <!--                    android:textSize="@dimen/_15sdp"-->
+            <!--                    android:checked="true"-->
+            <!--                    android:text="@string/english"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:buttonTint="@color/colorPrimary"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    />-->
+            <!--                <RadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:id="@+id/rbSpanish"-->
+            <!--                    android:layout_marginTop="@dimen/_10sdp"-->
+            <!--                    android:textSize="@dimen/_15sdp"-->
+            <!--                    android:text="@string/spanish"-->
+            <!--                    android:buttonTint="@color/colorPrimary"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    />-->
+            <!--            </RadioGroup>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

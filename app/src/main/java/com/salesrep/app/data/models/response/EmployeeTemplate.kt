@@ -1,0 +1,33 @@
+package com.salesrep.app.data.models.response
+
+data class EmployeeTemplate(
+    val allowpayment_flg: Boolean,
+    val altphonenumber: String,
+    val auth_flg: Boolean,
+    val auth_password: String,
+    val calc_fullname: String,
+    val cf_tswid: String,
+    val city: String,
+    val comments: String,
+    val country: String,
+    val cti_agent_ext: String,
+    val email: String,
+    val enddt: String,
+    val firstname: String,
+    val id: Int,
+    val integration_id: String,
+    val lastname: String,
+    val lov_employee_status: String,
+    val lov_employee_type: String,
+    val mainphonenumber: String,
+    val middlename: String,
+    val mothermaidenname: String,
+    val name: String,
+    val outsourcing: String,
+    val startdt: String,
+    val state: String,
+    val street: String,
+    val streetnum: String,
+    val suburb: String,
+    val zipcode: String
+)

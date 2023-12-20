@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_6sdp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/blue_00"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/_10sdp"
+        tools:text="1." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAstric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/astric"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        android:textSize="@dimen/_14sdp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/blue_00"
+        android:textSize="@dimen/_10sdp"
+        tools:text="Edward Casatro" />
+
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:background="@drawable/bg_light_green_8dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:layout_gravity="center_vertical"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:text="@string/start"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp" />
+
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:background="@drawable/bg_light_grey_8dp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:text="@string/skip"
+        android:textAlignment="center"
+        android:textColor="@color/blue_00"
+        android:textSize="@dimen/_11sdp" />
+
+
+
+    <TextView
+        android:id="@+id/tvEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:background="@drawable/bg_light_grey_8dp"
+        android:backgroundTint="@color/red"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:text="@string/end"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

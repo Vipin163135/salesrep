@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="data"
+            type="com.salesrep.app.data.models.inventory.StockProductData" />
+    </data>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSKU"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_horizontal"
+                android:text="@{data.integration_num}"
+                android:textColor="@color/blue_00"
+                android:textSize="@dimen/_10sdp" />
+            <!---->
+            <!---->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:gravity="center_horizontal"
+                android:ellipsize="end"
+                android:text="@{data.title}"
+                android:fontFamily="@font/montserrat_semibold"
+                android:maxLines="1"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUom"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:gravity="center_horizontal"
+                android:ellipsize="end"
+                android:text="@{data.lov_product_uom}"
+                android:fontFamily="@font/montserrat_semibold"
+                android:maxLines="1"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/rvInventory"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_stock_qty_header"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotal"
+                android:layout_width="@dimen/_72sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:gravity="center_horizontal"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_semibold"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/grey_6" />
+
+    </LinearLayout>
+</layout>
+
+
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/rout_progress"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSubTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/today_route_text"
+        android:textColor="@color/grey_6"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@+id/tvRouteName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRouteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/tvSubTitle1"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+    <com.salesrep.app.circularArcProgress.ArcProgress
+        android:id="@+id/arcProgress"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:arc_angle="180"
+        app:arc_finished_color="@color/colorPrimary"
+        app:arc_progress="0"
+        app:arc_show_text="false"
+        app:arc_stroke_width="@dimen/_12sdp"
+        app:arc_text_color="@color/colorPrimary"
+        app:arc_unfinished_color="@color/grey_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubTitle1" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMinProg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/min_progress_percent"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@id/arcProgress"
+        app:layout_constraintEnd_toStartOf="@id/arcProgress"
+        app:layout_constraintTop_toTopOf="@id/arcProgress" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMaxProg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/max_progress_percent"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@id/arcProgress"
+        app:layout_constraintStart_toEndOf="@id/arcProgress"
+        app:layout_constraintTop_toTopOf="@id/arcProgress" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/arcProgress"
+        app:layout_constraintEnd_toEndOf="@id/arcProgress"
+        app:layout_constraintHorizontal_bias="0.40"
+        app:layout_constraintStart_toStartOf="@id/arcProgress"
+        app:layout_constraintTop_toTopOf="@id/arcProgress" />
+    <!---->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@id/arcProgress"
+        app:layout_constraintStart_toEndOf="@id/tvProgress"
+        app:layout_constraintTop_toTopOf="@id/arcProgress" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

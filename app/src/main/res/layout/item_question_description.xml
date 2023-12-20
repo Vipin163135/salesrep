@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="answer"
+            type="com.salesrep.app.data.models.response.Answer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/blue_004"
+            android:textSize="@dimen/_12sdp"
+            android:text="5. Question with free text answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_100sdp"
+            android:background="@drawable/bg_outline_grey"
+            app:layout_constraintTop_toBottomOf="@id/tvQuestion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:padding="@dimen/_6sdp"
+            android:inputType="text"
+            android:id="@+id/etAnswer"
+            android:text="@={answer.data}"
+            android:gravity="start"
+            android:textSize="@dimen/_13sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:hint="@string/enter_text_here"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

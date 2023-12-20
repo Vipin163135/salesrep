@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginHorizontal="@dimen/_12sdp"
+android:layout_marginTop="@dimen/_4sdp">
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="@dimen/_72sdp"
+    android:layout_height="wrap_content"
+    android:id="@+id/tvSerialNum"
+    android:fontFamily="@font/montserrat_medium"
+    android:text="@string/total"
+    android:textColor="@color/black"
+    android:textSize="@dimen/_11sdp" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_marginHorizontal="@dimen/_2sdp"
+    android:id="@+id/tvPaymentMethod"
+    android:fontFamily="@font/montserrat_medium"
+    android:text="@string/total"
+    android:textColor="@color/black"
+    android:textSize="@dimen/_11sdp" />
+
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tvTotalPayment"
+    android:layout_width="@dimen/_72sdp"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/montserrat_medium"
+    android:textColor="@color/black"
+    android:gravity="end"
+    android:textSize="@dimen/_11sdp" />
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:drawableLeft="@drawable/quantum_ic_arrow_back_grey600_24"
+                android:drawablePadding="@dimen/_12sdp"
+                android:drawableTint="@color/black"
+                android:gravity="start"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/order_list"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/clMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:cardElevation="1dp"
+                    android:layout_marginVertical="@dimen/_6sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_8sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:paddingHorizontal="@dimen/_12sdp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/customer_code"
+                                        android:textColor="@color/grey_6"
+                                        android:textSize="@dimen/_12sdp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvCusomerName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:text="28.5km"
+                                        android:textColor="@color/blue_004"
+                                        android:textSize="@dimen/_12sdp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/customer_name"
+                                        android:textColor="@color/grey_6"
+                                        android:textSize="@dimen/_12sdp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvCusomerNum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:text="@string/name"
+                                        android:textColor="@color/blue_004"
+                                        android:textSize="@dimen/_12sdp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/tvEnd"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_height="@dimen/_32sdp"
+                                android:background="@drawable/bg_outline_red"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="@string/end"
+                                android:textAllCaps="false"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/_14sdp"
+                                />
+
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/tvNewOrder"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_height="@dimen/_32sdp"
+                                android:background="@drawable/bg_outline_blue"
+                                android:backgroundTint="@color/blue_004"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="@string/new_order"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_14sdp"
+                                />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:id="@+id/rvOrders"
+                android:nestedScrollingEnabled="false"
+                android:background="@color/white"
+                tools:listitem="@layout/item_orders"
+                android:layout_marginHorizontal="@dimen/_16sdp"/>
+
+        </LinearLayout>
+
+
+<!--    </ScrollView>-->
+</layout>

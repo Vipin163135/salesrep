@@ -1,0 +1,216 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.firebase.crashlytics'
+
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.salesrep.app"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+
+        dataBinding = true
+
+        // for view binding:
+        // viewBinding = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.firebase:firebase-messaging:23.0.2'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    /*
+    * DAGGER
+    * */
+    def daggerVersion = '2.40.5'
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    /*
+    * HILT
+    * */
+    implementation("com.google.dagger:hilt-android:2.38.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.38.1")
+
+
+    /*
+    * RETROFIT
+    * */
+    def retrofitVersion = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+    /*
+    * NAVIGATION CONTROLLER
+    * */
+    def nav_version = "2.4.2"
+    implementation 'androidx.fragment:fragment-ktx:1.4.1'
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    /*
+    * OK HTTP
+    * */
+    def okHttpVersion = '4.9.0'
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+
+    /*
+    * COUNTRY CODE PICKER
+    *
+    implementation 'com.hbb20:ccp:2.2.9'
+    */
+
+    /*
+     * SHARED PREFERENCE MANAGER
+     */
+    implementation "androidx.preference:preference-ktx:1.2.0"
+
+    /*
+    * PERMISSION DISPATCHER
+    * */
+    def per_version= "4.9.2"
+    implementation "com.github.permissions-dispatcher:permissionsdispatcher:$per_version"
+    annotationProcessor "com.github.permissions-dispatcher:permissionsdispatcher-processor:$per_version"
+
+    /*
+    * CIRCULAR IMAGEVIEW
+    */
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+//    /*
+//    * PIN VIEW
+//    * */
+//    implementation "com.chaos.view:pinview:1.4.3"
+
+    /*
+    * GLIDE
+    * */
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    /*
+    * INTUIT DIMENSIONS
+    * */
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    /*
+    * RESTRING FOR LOCALIZATION
+    * */
+
+    // Replace bundled strings dynamically
+    implementation 'dev.b3nedikt.restring:restring:5.1.4'
+
+    // Intercept view inflation
+    implementation 'dev.b3nedikt.viewpump:viewpump:4.0.7'
+
+    // Allows to update the text of views at runtime without recreating the activity
+    implementation 'dev.b3nedikt.reword:reword:4.0.1'
+
+    // Manages the Locale used by the app
+    implementation 'dev.b3nedikt.applocale:applocale:2.0.3'
+
+
+    /*
+    * TIMBER
+    * */
+    implementation "com.jakewharton.timber:timber:4.7.1"
+
+    /*
+    * Google Places
+    * */
+    implementation 'com.google.android.libraries.places:places:2.6.0'
+    implementation "com.google.android.gms:play-services-places:17.0.0"
+
+    /*
+    * Firebase Analytics
+    * */
+    implementation platform('com.google.firebase:firebase-bom:31.0.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+
+
+    /*
+    * Google Maps
+    * */
+    implementation 'com.google.maps.android:maps-ktx:3.2.1'
+    implementation 'com.google.maps.android:maps-utils-ktx:3.2.1'
+
+    /*
+    * Fragivity
+    * */
+    implementation 'com.github.vitaviva.fragivity:core:0.3.1'
+
+    /*
+    * ArcProgress
+    * */
+//    implementation 'com.github.hadibtf:SemiCircleArcProgressBar:1.1.1'
+//    implementation 'com.github.lzyzsd:circleprogress:1.2.4'
+
+    /*
+    * GraphView
+    * */
+    implementation 'com.jjoe64:graphview:4.2.2'
+
+    /*PERMISSION DISPATCHER*/
+    implementation "com.github.permissions-dispatcher:permissionsdispatcher:4.9.2"
+    kapt "com.github.permissions-dispatcher:permissionsdispatcher-processor:4.9.2"
+
+    /*Room Database*/
+    def roomVersionCode= "2.4.2"
+    implementation "androidx.room:room-ktx:$roomVersionCode"
+    implementation "androidx.room:room-common:$roomVersionCode"
+    implementation "androidx.room:room-runtime:$roomVersionCode"
+    kapt "androidx.room:room-compiler:$roomVersionCode"
+//    kapt 'android.arch.persistence.room:compiler:1.1.1'
+    implementation "androidx.room:room-testing:$roomVersionCode"
+    implementation "androidx.room:room-paging:$roomVersionCode"
+
+
+    //RNCryptor
+    implementation 'com.github.tgio:rncryptor-native:0.0.9'
+
+    //EMDK
+//    compileOnly 'com.symbol:emdk:9.1.1'
+}

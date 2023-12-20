@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_4sdp"
+      android:layout_marginBottom="@dimen/_4sdp"
+      android:padding="@dimen/_4sdp"
+      android:orientation="vertical"
+      android:id="@+id/llNotification">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:paddingLeft="@dimen/_6sdp"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:layout_width="wrap_content"
+              android:id="@+id/ivProfile"
+              android:layout_gravity="center_vertical"
+              android:src="@drawable/ic_bell_info"
+              app:tint="@color/blue_004"
+              android:layout_marginTop="@dimen/_4sdp"
+              android:layout_height="wrap_content"/>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_marginLeft="@dimen/_13sdp"
+                  android:layout_marginRight="@dimen/_13sdp"
+                  android:textColor="@color/grey_6"
+                  android:layout_gravity="bottom"
+                  android:maxLines="1"
+                  android:id="@+id/tvTime"
+                  android:textSize="@dimen/_10sdp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:layout_height="wrap_content"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:maxLines="2"
+                  android:id="@+id/tvTitle"
+                  android:ellipsize="end"
+                  android:layout_marginLeft="@dimen/_13sdp"
+                  android:layout_marginRight="@dimen/_13sdp"
+                  android:textColor="@color/blue_004"
+                  android:textSize="@dimen/_14sdp"
+                  android:fontFamily="@font/montserrat_bold"
+                  android:text="Lorem ipsum lorem ipsum ipsum lorem ."
+                  android:layout_height="wrap_content"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:maxLines="2"
+                  android:id="@+id/tvMessage"
+                  android:ellipsize="end"
+                  android:layout_marginLeft="@dimen/_13sdp"
+                  android:layout_marginRight="@dimen/_13sdp"
+                  android:textColor="@color/grey_6"
+                  android:textSize="@dimen/_12sdp"
+                  android:fontFamily="@font/montserrat_regular"
+                  android:text="Lorem ipsum lorem ipsum ipsum lorem ."
+                  android:layout_height="wrap_content"/>
+
+          </LinearLayout>
+
+      </LinearLayout>
+      <View
+          android:layout_width="match_parent"
+          android:background="@color/grey_6"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_height="0.5dp"/>
+  </LinearLayout>
+</layout>

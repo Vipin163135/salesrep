@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlAnswer"
+        android:background="@drawable/bg_outline_grey_dark"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAnswer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textColor="@color/grey_6"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingVertical="@dimen/_6sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:inputType="number"
+            android:digits="0123456879"
+            android:textSize="@dimen/_13sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:hint="@string/enter_digit"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

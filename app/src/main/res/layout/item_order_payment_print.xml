@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_4sdp">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/tvProductName"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/total"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTotalAmnt"
+        android:layout_width="@dimen/_72sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/_11sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="@dimen/_72sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDueAmount"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPaidAmnt"
+        android:layout_width="@dimen/_72sdp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/_11sdp" />
+
+
+</LinearLayout>
+
+

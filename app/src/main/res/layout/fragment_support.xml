@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:drawableLeft="@drawable/ic_back"
+            android:drawablePadding="@dimen/_12sdp"
+            android:gravity="start"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/support"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="1dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/_8sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/get_in_touch"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:fontFamily="@font/montserrat_semibold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/customer_care_num"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:id="@+id/tvCall"
+                            android:drawableStart="@drawable/ic_call_care"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:drawablePadding="@dimen/_12sdp"
+                            android:gravity="center_vertical"
+                            android:fontFamily="@font/montserrat_regular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/customer_care_email"
+                            android:textColor="@color/black"
+                            android:id="@+id/tvMail"
+                            android:textSize="@dimen/_12sdp"
+                            android:drawableStart="@drawable/ic_mail_care"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:drawablePadding="@dimen/_12sdp"
+                            android:gravity="center_vertical"
+                            android:fontFamily="@font/montserrat_regular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/customer_care_num"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:id="@+id/tvWhatsapp"
+                            android:drawableStart="@drawable/ic_whatsapp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:gravity="center_vertical"
+                            android:fontFamily="@font/montserrat_regular"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvAddInventory"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/_32sdp"-->
+        <!--            android:background="@drawable/background_blue_light_curved_12dp"-->
+        <!--            android:fontFamily="@font/montserrat_semibold"-->
+        <!--            android:gravity="center"-->
+        <!--            android:paddingTop="@dimen/_6sdp"-->
+        <!--            android:paddingBottom="@dimen/_6sdp"-->
+        <!--            android:text="@string/create_product_movement"-->
+        <!--            android:layout_marginVertical="@dimen/_8sdp"-->
+        <!--            android:layout_marginHorizontal="@dimen/_16sdp"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="@dimen/_13sdp" />-->
+
+    </LinearLayout>
+
+</layout>

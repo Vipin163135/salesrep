@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.salesrep.app.data.models.response.ProductAssortment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_12sdp"
+            android:weightSum="100"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSku"
+                android:layout_width="@dimen/_72sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_horizontal"
+                android:text="@{data.product.integration_num}"
+                android:textColor="@color/blue_00"
+                android:textSize="@dimen/_10sdp" />
+            <!---->
+            <!---->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDesc"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:gravity="center_horizontal"
+                android:text="@{data.product.title}"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_semibold"
+                android:maxLines="1"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+            <!---->
+            <!---->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUom"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@{data.product.lov_product_uom}"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUnitPrice"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@{String.format(@string/decimal_2_format,data.accountProduct.net_price)}"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+
+<!--            android:text="@={data.accountProduct.agreed_qty}"-->
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tvQuantity"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:hint="@string/enter"
+                android:paddingVertical="@dimen/_6sdp"
+                android:background="@null"
+                android:inputType="numberDecimal"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSubTotal"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="@{data.accountProduct.sub_total}"
+                android:maxLines="2"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBonusQty"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="0"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTax"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@{String.format(@string/decimal_2_format,data.accountProduct.tax_total)}"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotal"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@{data.accountProduct.total}"
+                android:textColor="@color/grey_6"
+                android:textSize="@dimen/_10sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/grey_6" />
+
+    </LinearLayout>
+</layout>
+
+
+

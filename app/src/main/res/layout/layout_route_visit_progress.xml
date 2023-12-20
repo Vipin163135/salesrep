@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/visit_effectivenes"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textColor="@color/black"
+        android:id="@+id/tvTitle2"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/today_visits_completed"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle2"
+        android:textSize="@dimen/_12sdp"
+        android:id="@id/tvSubTitle"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:textColor="@color/grey_6"
+        />
+
+
+    <com.salesrep.app.circularArcProgress.DonutProgress
+        android:id="@+id/arc_img"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:donut_progress="30"
+        app:donut_finished_stroke_width="@dimen/_10sdp"
+        app:donut_unfinished_stroke_width="@dimen/_10sdp"
+        app:donut_finished_color="@color/colorPrimary"
+        app:donut_unfinished_color="@color/grey_7"
+        app:donut_text_color="@color/colorPrimary"
+        app:donut_text_size="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_20sdp"
+        />
+
+
+    <View
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        app:layout_constraintTop_toTopOf="@id/arc_img"
+        app:layout_constraintStart_toEndOf="@id/arc_img"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/view1"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProgess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/visit_executed"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="@id/view1"
+            app:layout_constraintBottom_toBottomOf="@id/view1"
+            app:layout_constraintHorizontal_bias="0.40"
+            app:layout_constraintStart_toEndOf="@id/view1" />
+
+    <View
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        app:layout_constraintStart_toEndOf="@id/arc_img"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/grey_7"
+        android:id="@+id/view2"
+        />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/total_visits"
+            android:textColor="@color/grey_6"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="@id/view2"
+            app:layout_constraintBottom_toBottomOf="@id/view2"
+            app:layout_constraintHorizontal_bias="0.40"
+            app:layout_constraintStart_toEndOf="@id/view2" />
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="@font/montserrat_regular"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/tvProgess"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/arc_img"-->
+    <!--        android:textSize="@dimen/_12sdp"-->
+    <!--        android:id="@+id/tvPos"-->
+    <!--        android:textColor="@color/colorPrimary"-->
+    <!--        android:layout_marginStart="@dimen/_2sdp"-->
+    <!--        android:layout_marginBottom="@dimen/_4sdp"-->
+    <!--        android:text="pos"-->
+    <!--        />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
